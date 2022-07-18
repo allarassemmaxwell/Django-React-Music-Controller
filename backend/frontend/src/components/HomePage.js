@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { CreateRoomPage } from "./CreateRoomPage";
 import { RoomJoinPage } from "./RoomJoinPage";
 import Room from "./Room";
 import { Grid, Button, ButtonGroup, Typography } from "@material-ui/core";
@@ -10,6 +9,8 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
+import CreateRoomPage from "./CreateRoomPage";
+
 
 
 
