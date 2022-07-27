@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { TextField, Button, Grid, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-export class RoomJoinPage extends Component {
+export default class RoomJoinPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,9 +11,9 @@ export class RoomJoinPage extends Component {
         };
         this.handleTextFieldChange = this.handleTextFieldChange.bind(this);
         this.roomButtonPressed = this.roomButtonPressed.bind(this);
-      }
+    }
 
-    render () {
+    render() {
         return (
             <Grid container spacing={1}>
                 <Grid item xs={12} align="center">
@@ -50,13 +50,12 @@ export class RoomJoinPage extends Component {
         );
     }
 
-
     handleTextFieldChange(e) {
         this.setState({
             roomCode: e.target.value,
         });
-      }
-    
+    }
+
     roomButtonPressed() {
         const requestOptions = {
             method: "POST",
@@ -75,8 +74,6 @@ export class RoomJoinPage extends Component {
             })
             .catch((error) => {
                 console.log(error);
-            }
-        );
+            });
     }
 }
-
